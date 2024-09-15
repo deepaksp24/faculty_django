@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="{% url 'updateFaculty' %}" method="post">
+      {% csrf_token %} id: <input type="text" name="fId" />
+      <br />
+      name:<input type="text" name="fName" /> <br />
+      department:<input type="text" name="fDept" /> <br />
+      sal:<input type="number" name="fSal" /><br />
+      <button type="submit">UPDATE</button>
+    </form>
+  </body>
+</html>
