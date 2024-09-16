@@ -15,5 +15,7 @@ urlpatterns = [
     path("delete_faculty/", views.deleteFaculty, name='deleteFaculty'),
 
     path("update_faculty_form/", views.updateFacultyForm, name='updateFacultyForm'),
-    path("update_faculty/", views.updateFaculty, name='updateFaculty')
+    path("update_faculty/", views.updateFaculty, name='updateFaculty'),
+
+    path("delet_all/", views.deleteAll, name='deleteAll')
 ]

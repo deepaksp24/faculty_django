@@ -4,10 +4,8 @@ from .models import Faculty
 
 # Create your views here.
 
-
 def startPage(request):
     return render(request, 'index.html')
-
 
 def addFacultyForm(request):
     return render(request, 'facultyForm.html')
@@ -65,3 +63,7 @@ def updateFaculty(request):
         faculty.fSal = sal
     faculty.save()
     return HttpResponse("update successfully")
+
+def deleteAll(request):
+    Faculty.objects.all().delete()
+    return HttpResponse("All deleted successfully")
